@@ -21,7 +21,8 @@ zuul:
       strip-prefix: false
     leaders:
       path: /leaders/**
-      serviceId: gamification
+      //serviceId: gamification
+      url: https://heroku-gamification.herokuapp.com
       strip-prefix: false
     stats:
       path: /stats/**
