@@ -1,3 +1,8 @@
+spring:
+  devtools:
+    remote:
+      secret: somesecret
+
 server:
   port: ${PORT:8000}
   
