@@ -9,28 +9,33 @@ zuul:
   routes:
     multiplications:
       path: /multiplications/**
-      serviceId: multiplication
+      # serviceId: multiplication
+      url: http://heroku-multiplication.herokuapp.com
       strip-prefix: false
     results:
       path: /results/**
-      serviceId: multiplication
+      # serviceId: multiplication
+      url: http://heroku-multiplication.herokuapp.com
       strip-prefix: false
     users:
       path: /users/**
-      serviceId: multiplication
+      # serviceId: multiplication
+      url: http://heroku-multiplication.herokuapp.com
       strip-prefix: false
     leaders:
       path: /leaders/**
-      //serviceId: gamification
-      url: https://heroku-gamification.herokuapp.com
+      # serviceId: gamification
+      url: http://heroku-gamification.herokuapp.com
       strip-prefix: false
     stats:
       path: /stats/**
-      serviceId: gamification
+      # serviceId: gamification
+      url: http://heroku-gamification.herokuapp.com
       strip-prefix: false
     scores:
       path: /scores/**
-      serviceId: gamification
+      # serviceId: gamification
+      url: http://heroku-gamification.herokuapp.com
       strip-prefix: false
     
 management:
