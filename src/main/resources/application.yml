@@ -4,7 +4,6 @@ server:
 debug: true
 
 zuul:
-  ribbon-isolation-strategy: thread
   prefix: /api
   ignoredServices: '*'
   routes:
