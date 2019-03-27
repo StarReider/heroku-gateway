@@ -1,14 +1,10 @@
-spring:
-  devtools:
-    remote:
-      secret: somesecret
-
 server:
   port: ${PORT:8000}
   
 debug: true
 
 zuul:
+  ribbon-isolation-strategy: thread
   prefix: /api
   ignoredServices: '*'
   routes:
