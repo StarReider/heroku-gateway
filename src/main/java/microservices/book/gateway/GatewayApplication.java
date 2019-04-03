@@ -10,7 +10,7 @@ import microservices.book.gateway.configuration.RibbonConfiguration;
 
 @EnableZuulProxy
 @EnableEurekaClient
-@RibbonClients(/*defaultConfiguration = RibbonConfiguration.class*/)
+@RibbonClients(defaultConfiguration = RibbonConfiguration.class)
 @SpringBootApplication
 public class GatewayApplication {
 
