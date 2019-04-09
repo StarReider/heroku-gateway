@@ -42,15 +42,15 @@ public class RibbonConfiguration {
 
 				HttpClient httpClient = new DefaultHttpClient();
 				HttpUriRequest getRequest = new HttpGet(urlStr);
-				LOGGER.warn("[TEST]Request to {}", urlStr);
+				System.out.println("[TEST]Request to " + urlStr);
 				String content=null;
 				try {
 					HttpResponse response = httpClient.execute(getRequest);
 					content = EntityUtils.toString(response.getEntity());
-					LOGGER.warn("[TEST]content {}", content);
+					System.out.println("[TEST]content " + content);
 					isAlive = (response.getStatusLine().getStatusCode() == 200);
 					if (getExpectedContent()!=null){
-						LOGGER.debug("content:" + content);
+						System.out.println("[TEST]content:" + content);
 						if (content == null){
 							isAlive = false;
 						}else{
