@@ -1,7 +1,9 @@
 server:
   port: ${PORT:8000}
   
-debug: true
+logging:
+  level:
+    root: DEBUG
 
 zuul:
   prefix: /api
