@@ -53,4 +53,5 @@ eureka:
   instance:
     hostname: ${DOMAIN_NAME}
     nonSecurePort: 80
-    health-check-url: http://${DOMAIN_NAME}/${endpoints.health.path}
+    health-check-url: http://${DOMAIN_NAME}/actuator/health
+    status-page-url: http://${DOMAIN_NAME}/actuator/info
