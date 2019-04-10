@@ -51,6 +51,7 @@ eureka:
     serviceUrl:
       defaultZone: ${EUREKA_URL:http://localhost:5000}/eureka/
   instance:
+    non-secure-port: 80
     hostname: ${DOMAIN_NAME}
     health-check-url: http://${DOMAIN_NAME}/actuator/health
     status-page-url: http://${DOMAIN_NAME}/actuator/info
