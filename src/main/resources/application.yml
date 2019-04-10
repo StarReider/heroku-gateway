@@ -50,3 +50,6 @@ eureka:
   client:
     serviceUrl:
       defaultZone: ${EUREKA_URL:http://localhost:5000}/eureka/
+  instance:
+    hostname: ${DOMAIN_NAME}
+    nonSecurePort: 80
