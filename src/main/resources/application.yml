@@ -53,3 +53,4 @@ eureka:
   instance:
     hostname: ${DOMAIN_NAME}
     nonSecurePort: 80
+    health-check-url: http://${DOMAIN_NAME}/${endpoints.health.path}
