@@ -1,8 +1,6 @@
 package microservices.book.gateway.configuration;
 
 import java.util.Arrays;
-import java.util.Collections;
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -24,11 +22,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	}
 	
 	@Bean
-	CorsConfigurationSource corsConfigurationSource() {
+	public CorsConfigurationSource corsConfigurationSource() {
 		CorsConfiguration configuration = new CorsConfiguration();
 		configuration.setAllowCredentials(true);
-		configuration.setAllowedOrigins(Collections.singletonList(CorsConfiguration.ALL));
+		configuration.setAllowedOrigins(Arrays.asList(CorsConfiguration.ALL));
 		configuration.setAllowedMethods(Arrays.asList(HttpMethod.GET.name(), HttpMethod.OPTIONS.name(), HttpMethod.POST.name()));
+		configuration.setAllowedHeaders(Arrays.asList(CorsConfiguration.ALL));
 		
 		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
 		source.registerCorsConfiguration("/**", configuration);
