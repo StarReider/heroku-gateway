@@ -16,7 +16,7 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http.cors().and()
+		http.cors().and().csrf().disable()
 			//if X-Forwarded-Proto then use https (heroku)
 		    .requiresChannel()
 	        .requestMatchers(r -> r.getHeader("X-Forwarded-Proto") != null)
